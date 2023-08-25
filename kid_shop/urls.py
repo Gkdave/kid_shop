@@ -24,7 +24,9 @@ from django.urls import path,include
  
 #username admin
 #password dave@123
-
+admin.site.site_header = "Dave Kid shop administation"
+admin.site.site_title = "Dave kidshop Admin Portal"
+admin.site.index_title = "Welcome to Dave Kid_shop"
 
 urlpatterns = [
     
