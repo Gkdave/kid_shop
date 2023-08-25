@@ -40,9 +40,9 @@ def new_conversation(request,item_pk):
     
 @login_required
 def inbox(request):
-    conversation = Conversation.objects.filter(members__in=[request.user.id])
+    conversations = Conversation.objects.filter(members__in=[request.user.id])
     return render(request,'conversation/inbox.html',{
-        'conversation':conversation 
+        'conversations':conversations
     })
     
 @login_required

@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect 
+from django.shortcuts import render,redirect
 from item.models import Category, Item 
 
 from .forms import SignupForm 
@@ -12,6 +12,12 @@ def index(request):
         'categories' : categories,
         'items' : items,
     }) 
+
+
+def logout(request):
+    # logout(request)
+    return redirect('login')
+
 
 def contact(request):
     return render(request, 'core/contact.html') 
